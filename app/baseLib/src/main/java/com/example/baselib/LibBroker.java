@@ -20,8 +20,8 @@ public class LibBroker implements LibInterface {
 
     public void createAgent(LibType libType, Application application) throws Exception {
         Class<?> runtimeClass = Class.forName(libType.getClassName());
-        Constructor<?> constructor = runtimeClass.getDeclaredConstructor(String.class, int.class, Application.class);
-        this.agent = (BaseLibClass) constructor.newInstance("This is addon", 3, application);
+        Constructor<?> constructor = runtimeClass.getDeclaredConstructor(Application.class);
+        this.agent = (BaseLibClass) constructor.newInstance(application);
     }
 
     @Override

@@ -13,7 +13,7 @@ import dji.sdk.sdkmanager.DJISDKManager;
 
 public class Lib1Class extends BaseLibClass {
 
-    public Lib1Class(String addonString, int addonInt, Application application) {
+    public Lib1Class(Application application) {
         super(application);
         Helper.install(application);
     }

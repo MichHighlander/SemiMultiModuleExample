@@ -13,7 +13,7 @@ import dji.v5.manager.SDKManager;
 
 public class Lib2Class extends BaseLibClass {
 
-    public Lib2Class(String addonString, int addonInt, Application application) {
+    public Lib2Class(Application application) {
         super(application);
         Helper.install(application);
     }
