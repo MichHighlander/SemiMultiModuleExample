@@ -10,12 +10,12 @@ import dji.v5.manager.SDKManager;
 public class Lib2Class extends BaseLibClass {
 
     public Lib2Class(String addonString, int addonInt, Application application) {
-        super(addonString, addonInt, application);
+        super(application);
         Helper.install(application);
     }
 
     @Override
     public String talk() {
-        return this.getClass().getName() + " " + this.addonInt + " " + SDKManager.getInstance().getSDKVersion();
+        return this.getClass().getName() + " - " + SDKManager.getInstance().getSDKVersion();
     }
 }
