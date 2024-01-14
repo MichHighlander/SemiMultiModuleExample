@@ -1,7 +1,8 @@
 package com.example.baselib;
 
+import android.app.Activity;
 import android.app.Application;
-import android.util.Log;
+import android.view.View;
 
 import java.lang.reflect.Constructor;
 
@@ -26,5 +27,15 @@ public class LibBroker implements LibInterface {
     @Override
     public String talk() {
         return this.agent.talk();
+    }
+
+    @Override
+    public View getLayoutView() {
+        return this.agent.getLayoutView();
+    }
+
+    @Override
+    public void initLibTxtView(Activity activity) {
+        this.agent.initLibTxtView(activity);
     }
 }
