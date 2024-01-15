@@ -54,7 +54,7 @@ android {
             applicationIdSuffix ".djiv5"
             versionNameSuffix "-djiv5"
         }
-
+//
 //        // Define flavors for different environments (e.g., development, production)
 //        development {
 //            dimension "environment"

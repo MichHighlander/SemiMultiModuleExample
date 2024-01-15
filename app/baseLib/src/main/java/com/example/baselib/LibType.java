@@ -4,11 +4,11 @@ public enum LibType {
     LIB1("djiv4", "com.example.lib1.Lib1Class"),
     LIB2("djiv5","com.example.lib2.Lib2Class");
 
-    private String buildTypeName;
+    private String flavorName;
     private String className;
 
-    LibType(String buildTypeName, String className) {
-        this.buildTypeName = buildTypeName;
+    LibType(String flavorName, String className) {
+        this.flavorName = flavorName;
         this.className = className;
     }
 
@@ -16,13 +16,12 @@ public enum LibType {
         return className;
     }
 
-    public static LibType findLibTypeByBuildType(String buildTypeName) throws RuntimeException {
-        //TODO: if we use multiple flavours we need to use contains and not equals
+    public static LibType findLibTypeByFlavor(String flavourName) throws RuntimeException {
         for (LibType libType : LibType.values()) {
-            if (libType.buildTypeName.equals(buildTypeName)) {
+            if (flavourName.contains(libType.flavorName)) {
                 return libType;
             }
         }
-        throw new RuntimeException("LibType not found for buildTypeName: " + buildTypeName);
+        throw new RuntimeException("LibType not found for flavourName: " + flavourName);
     }
 }
