@@ -17,6 +17,7 @@ public enum LibType {
     }
 
     public static LibType findLibTypeByBuildType(String buildTypeName) throws RuntimeException {
+        //TODO: if we use multiple flavours we need to use contains and not equals
         for (LibType libType : LibType.values()) {
             if (libType.buildTypeName.equals(buildTypeName)) {
                 return libType;

@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         TextView txt = findViewById(R.id.hello_txt);
         // Load and instantiate a class dynamically
         try {
-            LibBroker.getInstance().createAgent(LibType.findLibTypeByBuildType(BuildConfig.BUILD_TYPE), getApplication());
+            LibBroker.getInstance().createAgent(LibType.findLibTypeByBuildType(BuildConfig.FLAVOR), getApplication());
             txt.setText(LibBroker.getInstance().talk());
 
             Button libLayoutBtn = findViewById(R.id.lib_layout_btn);
