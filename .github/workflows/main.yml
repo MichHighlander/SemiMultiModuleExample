@@ -39,7 +39,6 @@ jobs:
 
     steps:
     - name: Check if build was successful
-      run: echo "Build status: ${{ needs.build.outputs.result }}"
       if: needs.build.outputs.result != 'success'
 
     - name: Fail if build failed
