@@ -22,22 +22,48 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
-        djiv4 {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            applicationIdSuffix ".djiv4"
-            versionNameSuffix "-djiv4"
-        }
-        djiv5 {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            applicationIdSuffix ".djiv5"
-            versionNameSuffix "-djiv5"
-        }
+//        djiv4 {
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+//            applicationIdSuffix ".djiv4"
+//            versionNameSuffix "-djiv4"
+//        }
+//        djiv5 {
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+//            applicationIdSuffix ".djiv5"
+//            versionNameSuffix "-djiv5"
+//        }
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    flavorDimensions "company"
+
+    productFlavors {
+        // Define flavors for different versions
+        djiv4 {
+            dimension "company"
+            applicationIdSuffix ".djiv4"
+            versionNameSuffix "-djiv4"
+        }
+        djiv5 {
+            dimension "company"
+            applicationIdSuffix ".djiv5"
+            versionNameSuffix "-djiv5"
+        }
+//
+//        // Define flavors for different environments (e.g., development, production)
+//        development {
+//            dimension "environment"
+//            buildConfigField "String", "API_URL", "\"https://api.dev.example.com\""
+//        }
+//        production {
+//            dimension "environment"
+//            buildConfigField "String", "API_URL", "\"https://api.example.com\""
+//        }
     }
 }
 
