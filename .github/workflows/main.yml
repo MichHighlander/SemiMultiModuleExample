@@ -1,0 +1,17 @@
+name: Build on Dev Branch
+
+on:
+  push:
+    branches:
+      - 'start-simulator'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Run build.sh script
+        run: ./build.sh
