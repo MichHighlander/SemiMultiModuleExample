@@ -38,4 +38,9 @@ public class LibBroker implements LibInterface {
     public void initLibTxtView(Activity activity) {
         this.agent.initLibTxtView(activity);
     }
+
+    @Override
+    public void stam() {
+        agent.stam();
+    }
 }

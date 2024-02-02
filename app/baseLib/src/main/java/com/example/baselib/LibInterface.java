@@ -7,4 +7,5 @@ public interface LibInterface {
     String talk();
     View getLayoutView();
     void initLibTxtView(Activity activity);
+    void stam();
 }
