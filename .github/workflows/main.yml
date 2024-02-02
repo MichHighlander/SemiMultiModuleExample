@@ -1,17 +1,25 @@
-name: Build on Dev Branch
+name: Android Build
 
 on:
   push:
     branches:
-      - 'main'
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-      - name: Run build.sh script
-        run: ./build.sh
+    - name: Set up JDK
+      uses: actions/setup-java@v2
+      with:
+        distribution: 'adopt'
+        java-version: '11'
+
+    - name: Build and assemble release
+      run: |
+        chmod +x ./gradlew
+        ./gradlew assembleRelease
