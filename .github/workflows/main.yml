@@ -27,9 +27,9 @@ jobs:
         chmod +x ./gradlew
         ./gradlew assembleRelease
 
-    - name: Upload APKs
-      uses: actions/upload-artifact@v2
-      with:
-        name: release
-        path: |
-          app/build/outputs/apk/*/*/*.apk
+    # - name: Upload APKs
+    #   uses: actions/upload-artifact@v2
+    #   with:
+    #     name: release
+    #     path: |
+    #       app/build/outputs/apk/*/*/*.apk
