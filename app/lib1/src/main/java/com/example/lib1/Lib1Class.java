@@ -34,4 +34,9 @@ public class Lib1Class extends BaseLibClass {
         TextView libTxt = activity.findViewById(R.id.lib_txt);
         libTxt.setText("This is Lib1 - After init lib txt");
     }
+
+    @Override
+    public void stam() {
+
+    }
 }
